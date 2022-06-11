@@ -1,0 +1,5 @@
+django-dotenv
+Django
+django-heroku
+requests
+gunicorn
