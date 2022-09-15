@@ -41,6 +41,9 @@
         <div class="container">
             <div class="columns">
                 <div class="column is-offset-4 is-4">
+                    {% if not weather_data %}
+                        <h1>The city was not found, please try again</h1>
+                    {% endif %}
                     {% for city_weather in weather_data %}
                     <div class="box">
                         <article class="media">
@@ -52,7 +55,7 @@
                             <div class="media-content">
                                 <div class="content">
                                     <p>
-                                        <span class="title">{{ city_weather.city }}</span>
+                                        <span class="title">{{ city_weather.city }}, {{ city_weather.country }}</span>
                                         <br>
                                         <span class="title">{{ city_weather.temperature }}° C</span>
                                         <br>
